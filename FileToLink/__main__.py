@@ -95,9 +95,11 @@ async def start(_, msg: Message):
 
 async def keep_awake(sleep_time=20 * 60):
     """
-    Heroku will sleep if it doesn't receive request during 30 minutes.
-    So this function will send request every specific time.
-    The time should be less than 30 minutes.
+    اگر هروکو در طول 30 دقیقه درخواست دریافت نکند، می‌خوابد.
+
+     بنابراین این تابع در هر زمان خاص درخواست ارسال می کند.
+
+     زمان باید کمتر از 30 دقیقه باشد.
     """
     while True:
         async with ClientSession() as session:
